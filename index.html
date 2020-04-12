@@ -126,16 +126,19 @@
                                             <div class="card red white-text center">
                                                 <div class="card-content" style="font-weight:bold">
                                                     Take a ScreenShot !!
-                                                                            </div>
+                                                </div>
                                                 <div class="collection" style="list-style:none"></div>
                                             </div>
                                         </div>
                                     </div>
                                  </div > `)
                     que.forEach((val, index) => {
+                        try {
+                            var val1 = val.replace("#name", ans[0])
+                        } catch (e) { }
                         var temp = `
                             <li class="collection-item black-text" style = "font-size: small;" >
-                                        <div class=" center p0 m0 " >${val}</div>
+                                        <div class=" center p0 m0 " >${val1}</div>
                                         <div class="center  p0 m0 ">- ${ans[index]}</div>
                                                         
                             </li >`
